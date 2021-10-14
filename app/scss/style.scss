@@ -1,2 +1,36 @@
+$primary: #fb5849;
+
+$font-family-base: 'Poppins', sans-serif;
+
 @import '../../node_modules/bootstrap/scss/bootstrap.scss';
 
+.nav-link:hover {
+    color: $primary !important;
+}
+
+.dropdown-menu {
+    transform: translateY(30px);
+    transition-duration: 500ms;
+}
+
+.dropdown:hover {
+    .dropdown-menu {
+        transform: translateY(0);
+        display: block;
+    }
+} 
+
+.dropdown-item {
+    transition-duration: 500ms;
+    font-size: 0.75rem;
+}
+
+.dropdown-item:hover {
+    background-color: white;
+    padding-left: 1.25rem;
+    color: $primary !important;
+}
+
+.dropdown-item:active {
+    color: $primary;
+}
