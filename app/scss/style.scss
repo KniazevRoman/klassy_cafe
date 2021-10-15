@@ -11,6 +11,16 @@ html, body {
 // Navbar // 
 
 .navbar {
+    .navbar-nav{
+        position: absolute;
+    }
+
+    @media (min-width: 768px) {
+        .navbar-nav {
+            position: static;;
+        }
+    }
+
     .active {
         .nav-link {
             color: $primary !important;
