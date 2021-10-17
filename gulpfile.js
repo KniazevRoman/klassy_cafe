@@ -40,6 +40,7 @@ function minifyImages() {
 function compileScripts() {
     return src([                                    // выбор файлов, с которыми будет осуществляться работа
         'node_modules/jquery/dist/jquery.js',
+        'node_modules/lightslider/dist/js/lightslider.min.js',
         'app/js/main.js'
     ])  
         .pipe(concat('main.min.js'))                // конкатенация выбранных файлов в 1 файл main.min.js
@@ -49,7 +50,10 @@ function compileScripts() {
 }
 
 function compileStyles() {
-    return src('app/scss/style.scss')               // выбор файлов, с которыми будет осуществляться работа
+    return src([                                    // выбор файлов, с которыми будет осуществляться работа
+        'app/scss/style.scss',
+        'node_modules/lightslider/dist/css/lightslider.min.css'
+    ])               
         .pipe(scss({outputStyle: 'compressed'}))    // преобразование scss файла в css файл
         .pipe(concat('style.min.css'))              // конкатенация выбранных файлов (сейчас 1 файл) в файл style.min.css
         .pipe(autoprefixer({
