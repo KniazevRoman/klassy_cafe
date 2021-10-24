@@ -216,7 +216,7 @@
             <div class="section-title text-primary h6"><span class="about-line me-2">-------</span>CHEFS</div>
             <h1 class="fw-bolder mt-3">Top level team from all over the world</h2>
         </div>
-        <div class="container d-md-flex justify-content-around py-4">
+        <div class="container d-lg-flex justify-content-around py-4">
             <div class="card mx-auto mb-3 border-3 col-12 col-md-3" style="width: 18rem;" id="Brady_Smith_card">
                 <div class="social-links text-center position-absolute" id="Brady_Smith_socials">
                     <div class="d-flex h-100 align-items-center justify-content-evenly align-self-center">
@@ -259,6 +259,88 @@
                   <p class="card-text">Seafood chef</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Reservation -->
+    <section id="reservation" class=" py-5 text-light">
+        <div class="container-sm align-items-start mx-auto row justify-content-between">
+            <div class="col-12 col-md-6">
+                <div class="section-title text-primary h6"><span class="about-line me-2">-------</span>RESERVATION</div>
+                <h1 class="fw-bolder mt-3">We will be pleased to reserve a table for you</h2>
+                <p class="py-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, provident doloremque commodi et at a! In nam blanditiis error magni?</p>
+                <div class="card pt-5 pb-3 my-5 w-75 mx-auto position-relative" style="width: 18rem;">
+                    <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-primary p-5" id='phone-badge'>
+                        <span class="visually-hidden">Phone image</span>
+                    </span>
+                    <div class="card-body text-dark text-center">
+                        <h5 class="card-title">Call us at any time</h5>
+                        <a class="card-text d-block text-decoration-none text-dark py-1" href="tel: +7 (999) 999-99-99">+7 (999) 999-99-99</a>
+                        <a class="card-text d-block text-decoration-none text-dark py-1" href="tel: +7 (888) 888-88-88">+7 (888) 888-88-88</a>
+                    </div>
+                </div>
+                <div class="py-1"></div>
+                <div class="card pt-5 pb-3 my-5 w-75 mx-auto position-relative" style="width: 18rem;">
+                    <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-primary p-5" id='email-badge'>
+                        <span class="visually-hidden">Envelope image</span>
+                    </span>
+                    <div class="card-body text-dark text-center">
+                        <h5 class="card-title">Write an e-mail if you wish</h5>
+                        <a class="card-text d-block text-decoration-none text-dark py-1" href="mailto: address@gmail.com">address@gmail.com</a>
+                        <a class="card-text d-block text-decoration-none text-dark py-1" href="mailto: chef@yahoo.com">chef@yahoo.com</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 col-md-6">
+                <div class="card pt-2 pb-3 my-5 w-75 mx-auto position-relative" style="width: 18rem;">
+                    <div class="card-body text-dark text-center">
+                        <h5 class="card-title mb-3">Reservation form</h5>
+                        <form>
+                            <div class="form-floating my-3">
+                                <input type="text" class="form-control" id="reservationClientName" name="reservationClientName" placeholder="name">
+                                <label for="reservationClientName">Name</label>
+                            </div>
+                            <div class="form-floating my-3">
+                                <input type="email" class="form-control" id="reservationClientEmail" name="reservationClientEmail" placeholder="e-mail">
+                                <label for="reservationClientEmail">Email</label>
+                            </div>
+                            <div class="form-floating my-3">
+                                <input type="tel" class="form-control" id="reservationClientPhone" name="reservationClientPhone" placeholder="phone">
+                                <label for="reservationClientPhone">Phone number</label>
+                            </div>
+                            <div class="my-3 text-start">
+                                <label for="reservationClientCount" class="form-label ps-2">Number of Guests</label>
+                                <select class="form-select form-select-lg" aria-label="reservationClientCount" id="reservationClientCount" name="reservationClientCount">
+                                    <option value="1" selected>1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                </select>
+                            </div>
+                            <div class="form-floating my-3">
+                                <input type="date" class="form-control" id="reservationClientDate" name="reservationClientDate">
+                                <label for="reservationClientDate">Date</label>
+                            </div>
+                            <div class="form-floating my-3">
+                                <input type="time" class="form-control" id="reservationClientTime" name="reservationClientTime">
+                                <label for="reservationClientDate">Time</label>
+                            </div>
+                            <div class="my-3 text-start">
+                                <label for="reservationClientText" class="form-label px-2">Additional wishes</label>
+                                <textarea class="form-control" id="reservationClientText" name="reservationClientText" rows="3"></textarea>
+                            </div>
+    
+                            <button type="submit" class="btn bg-primary text-light w-75">Make a reservation</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+  
         </div>
     </section>
 
