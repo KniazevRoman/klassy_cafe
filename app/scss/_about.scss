@@ -1,0 +1,30 @@
+#about {
+    .about-video {
+        background-image: url('../imgs/about-video-bg.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .rounded-circle {
+        transition-duration: 300ms;
+        width: 70px;
+        height: 70px;
+    }
+
+    .rounded-circle::after {
+        display: inline-block;
+        content: "";
+        border-top: 1em solid transparent;
+        border-right: 0;
+        border-bottom: 1em solid transparent;
+        border-left: 1.2em solid $light;
+        margin-left: 40%;
+        margin-top: 27%;
+    }
+
+    .rounded-circle:hover {
+        opacity: 0.75;
+        cursor: pointer;
+    }
+}

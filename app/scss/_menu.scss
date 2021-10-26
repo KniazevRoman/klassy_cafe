@@ -1,0 +1,36 @@
+#menu {
+    background-color: #fffafa;
+
+    .lSSlideOuter, .lSSlideWrapper  {
+        overflow-y: unset;
+        overflow-x: clip;
+    }
+
+    .lightSlider {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .lslide {
+        display: flex;
+        justify-content: center;
+    }
+
+    .lSAction>a {
+        background-image: url(../imgs/controls.png);
+        background-color: $primary;
+        border-radius: 50%;
+    }
+
+    .lSPrev {
+        background-position: 1px 0;
+        top: 110%;
+        left: 40%;
+    }
+
+    .lSNext {
+        background-position: -33px 0;
+        top: 110%;
+        right: 40%;
+    }
+}

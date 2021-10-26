@@ -1,0 +1,37 @@
+#chefs {
+    .card:hover {
+        cursor: pointer;
+    }
+
+    .social-links {
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: none;
+        background-color: rgba(251,88,73,0.2);
+    }
+
+    .facebook-link {
+        -webkit-mask: url('../imgs/facebook.svg') no-repeat 100% 100%;
+        mask: url('../imgs/facebook.svg') no-repeat 100% 100%;
+        -webkit-mask-size: cover;
+        mask-size: cover;
+        background-color: $light;
+    }
+
+    .twitter-link {
+        -webkit-mask: url('../imgs/twitter.svg') no-repeat 100% 100%;
+        mask: url('../imgs/twitter.svg') no-repeat 100% 100%;
+        -webkit-mask-size: cover;
+        mask-size: cover;
+        background-color: $light;
+    }
+
+    .instagram-link {
+        -webkit-mask: url('../imgs/instagram.svg') no-repeat 100% 100%;
+        mask: url('../imgs/instagram.svg') no-repeat 100% 100%;
+        -webkit-mask-size: cover;
+        mask-size: cover;
+        background-color: $light;
+    }
+}

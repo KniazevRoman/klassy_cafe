@@ -1,0 +1,20 @@
+#reservation {
+    background-image: url('../imgs/reservation-bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    #phone-badge {
+        background-image: url('../imgs/telephone.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 40%;
+    }
+
+    #email-badge {
+        background-image: url('../imgs/envelope.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 40%;
+    }
+}

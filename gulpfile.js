@@ -51,7 +51,7 @@ function compileScripts() {
 
 function compileStyles() {
     return src([                                    // выбор файлов, с которыми будет осуществляться работа
-        'app/scss/style.scss',
+        'app/scss/**/*.scss',
         'node_modules/lightslider/dist/css/lightslider.min.css'
     ])               
         .pipe(scss({outputStyle: 'compressed'}))    // преобразование scss файла в css файл
