@@ -71,7 +71,7 @@ function build() {
         'app/js/main.min.js',
         'app/*.html'
     ], {base: 'app'})                               // сохранить структуру проекта из app
-        .pipe(dest('dist'))
+        .pipe(dest('docs'))
 }
 
 function watching() {

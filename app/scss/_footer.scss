@@ -1,0 +1,35 @@
+footer {
+    .social-link {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 50%;
+        border: 1px solid transparent;
+        border-radius: 50%;
+        cursor: pointer;
+        transition-duration: 700ms;
+    }
+
+    .facebook-link {
+        background-image: url('../imgs/facebook-light.svg');
+    }
+
+    .facebook-link:hover {
+        background-image: url('../imgs/facebook.svg');
+    }
+
+    .twitter-link {
+        background-image: url('../imgs/twitter-light.svg');
+    }
+
+    .twitter-link:hover {
+        background-image: url('../imgs/twitter.svg');
+    }
+
+    .instagram-link {
+        background-image: url('../imgs/instagram-light.svg');
+    }
+
+    .instagram-link:hover {
+        background-image: url('../imgs/instagram.svg');
+    }
+}
