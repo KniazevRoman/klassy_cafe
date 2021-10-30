@@ -16,57 +16,39 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body data-spy="scroll" data-target=".navbar-collapse">
 
     <!-- Navbar -->
 
-    <nav class="navbar navbar-expand-md px-4 pb-0 bg-light">
+    <nav class="navbar sticky-top navbar-expand-md px-4 pb-0 bg-light">
         <div class="container-md justify-content-between align-center position-relative">
             <a class="navbar-brand py-3" href="index.html">
                 <img src="/imgs/klassy-logo.png" alt="klassy cafe logo" width="170" height="55">
             </a>
             <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                data-bs-target="#sticky-navbar" aria-controls="sticky-navbar" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon text-dark">&nbsp__</span>
             </button>
-            <div class="collapse navbar-collapse flex-grow-0 fw-bold bg-light" id="navbarSupportedContent">
-                <ul class="navbar-nav mb-0 text-center text-md-left bg-light w-100">
+            <div class="collapse navbar-collapse flex-grow-0 fw-bold bg-light" id="sticky-navbar">
+                <ul class="nav navbar-nav mb-0 text-center text-md-left bg-light w-100">
                     <li class="nav-item mx-lg-2 mx-md-0 active">
-                        <a class="nav-link text-dark fw-600" aria-current="true" href="#">Home</a>
+                        <a class="nav-link text-dark" href="#">Home</a>
                     </li>
-                    <li class="nav-item mx-lg-2 mx-md-0">
-                        <a class="nav-link text-dark" href="#about">About</a>
+                    <li class="about nav-item mx-lg-2 mx-md-0">
+                        <a class="nav-link text-dark" href="#about-scroll">About</a>
                     </li>
-                    <li class="nav-item mx-lg-2 mx-md-0">
-                        <a class="nav-link text-dark" href="#">Menu</a>
+                    <li class="menu nav-item mx-lg-2 mx-md-0">
+                        <a class="nav-link text-dark" href="#menu-scroll">Menu</a>
                     </li>
-                    <li class="nav-item mx-lg-2 mx-md-0">
-                        <a class="nav-link text-dark" href="#">Chefs</a>
+                    <li class="chefs nav-item mx-lg-2 mx-md-0">
+                        <a class="nav-link text-dark" href="#chefs-scroll">Chefs</a>
                     </li>
-                    <li class="nav-item dropdown mx-lg-2 mx-md-0">
-                        <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Features
-                        </a>
-                        <ul class="dropdown-menu text-dark border-0 p-0 bg-light fw-300 text-center text-md-left"
-                            aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item text-dark border-bottom border-gray-500" href="#">Features
-                                    page
-                                    1</a></li>
-                            <li><a class="dropdown-item text-dark border-bottom border-gray-500" href="#">Features
-                                    page
-                                    2</a></li>
-                            <li><a class="dropdown-item text-dark border-bottom border-gray-500" href="#">Features
-                                    page
-                                    3</a></li>
-                            <li><a class="dropdown-item text-dark border-bottom border-gray-500" href="#">Features
-                                    page
-                                    4</a></li>
-                        </ul>
+                    <li class="reservation nav-item mx-lg-2 mx-md-0">
+                        <a class="nav-link text-dark" href="#reservation-scroll">Reservation</a>
                     </li>
-                    <li class="nav-item mx-lg-2 mx-md-0">
-                        <a class="nav-link text-dark" href="#">Contact Us</a>
+                    <li class="special nav-item mx-lg-2 mx-md-0">
+                        <a class="nav-link text-dark" href="#special-scroll">Specials</a>
                     </li>
                 </ul>
             </div>
@@ -80,7 +62,7 @@
             <div class="reservation-cta text-white text-center col-12 col-lg-4 py-5 py-lg-0 d-lg-flex flex-column justify-content-center">
                 <h1 class="display-1">Klassy Cafe</h2>
                     <h6 class="mt-2 fw-bold">THE BEST EXPERIENCE</h6>
-                    <a href="#" class="btn btn-light text-primary fw-bold mt-3 px-3 py-2 align-self-center">Make A
+                    <a href="#reservation-scroll" class="btn btn-light text-primary fw-bold mt-3 px-3 py-2 align-self-center">Make A
                         Reservation</a>
             </div>
             <div id="carouselInterior" class="carousel slide col-12 col-lg-8" data-bs-ride="carousel">
@@ -107,6 +89,7 @@
                 </button>
             </div>
         </div>
+        <div id="about-scroll" class="py-3"></div>
     </section>
 
     <!-- About -->
@@ -140,6 +123,7 @@
                 <img src="imgs/about-video-bg.jpg" class="w-100 h-auto" alt="">
             </div>
         </div>
+        <div id="menu-scroll" class="py-3"></div>
     </section>
 
     <!-- Menu -->
@@ -208,6 +192,7 @@
                 </li>
             </ul>
         </div>
+        <div id="chefs-scroll" class="py-3"></div>
     </section>
 
     <!-- Chefs -->
@@ -260,6 +245,7 @@
                 </div>
             </div>
         </div>
+        <div id="reservation-scroll" class="py-3"></div>
     </section>
 
     <!-- Reservation -->
@@ -340,8 +326,8 @@
                     </div>
                 </div>
             </div>
-  
         </div>
+        <div id="special-scroll" class="py-3"></div>
     </section>
 
     <!-- Special -->
@@ -392,6 +378,9 @@
         <img src="imgs/white-logo.png" alt="white-logo" class="col-md-3 d-block mx-auto my-4" style="width: 10rem">
         <div class="col-md-3 d-flex justify-content-center align-items-center text-light">Roman Kniazev @ 2021</div>
     </footer>
+
+    <!-- Scroll-up button -->
+    <div class="d-none p-4 border rounded-circle position-fixed text-light" id="scroll-up"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"

@@ -1,9 +1,35 @@
 // --- Swipe active state for Navbar --- // 
-$(document).ready(function () {
-    $('ul.navbar-nav > li').click(function (e) {
-        $('ul.navbar-nav > li').removeClass('active');
-        $(this).addClass('active');
+const sections = document.querySelectorAll("section");
+const navLi = document.querySelectorAll(".nav-item");
+window.onscroll = () => {
+    let current = "";
+
+    sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        if (window.pageYOffset >= sectionTop - 87) {
+        current = section.getAttribute("id"); }
     });
+
+    navLi.forEach((li) => {
+        li.classList.remove("active");
+
+        if (li.classList.contains(current)) {
+            li.classList.add("active");
+        }
+
+        if (window.pageYOffset == 0) {
+            navLi[0].classList.add("active");
+        }
+    });
+};
+
+// --- Collapse the navbar after a click on a link --- //
+$(document).ready(function() {
+    if (document.documentElement.clientWidth <= 768) {
+        $('.nav-link').click(function() {
+            $('.navbar-toggler').trigger( "click" );
+        });
+    }
 });
 
 // --- Multi-item menu carousel --- //
@@ -90,8 +116,7 @@ $(document).ready(function(){
     });
 });
 
-// Special menu options //
-
+// --- Special menu options --- //
 const specialMenu = [
     {
         pic: 'imgs/tab-item-01.png',
@@ -231,4 +256,21 @@ $('#dinner-special').click(function() {
 
 $(document).ready(function(){
     $('#breakfast-special').trigger( "click" );
+});
+
+// --- Scroll to top button --- //
+$(document).ready(function() {
+    $('#scroll-up').click(function() {
+        document.documentElement.scrollTop = 0;
+    });
+});
+
+$(document).scroll(function() {
+    if(document.documentElement.scrollTop >= 700 && document.querySelector('#scroll-up').classList.contains('d-none')) {
+        $('#scroll-up').addClass('d-block');
+        $('#scroll-up').removeClass('d-none');
+    } else if(document.documentElement.scrollTop < 700 && document.querySelector('#scroll-up').classList.contains('d-block')) {
+        $('#scroll-up').addClass('d-none');
+        $('#scroll-up').removeClass('d-block');
+    }
 });

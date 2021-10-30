@@ -1,0 +1,19 @@
+#scroll-up {
+    width: 1rem;
+
+    border-color: transparent !important;
+
+    background-color: rgba(251, 88, 73, 0.3);
+
+    background-image: url('../imgs/arrow-up-circle.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 70%;
+
+    right: 4rem;
+    bottom: 4rem;
+
+    &:hover {
+        background-color: rgba(251, 88, 73, 1);
+    }
+}
