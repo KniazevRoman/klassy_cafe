@@ -9,7 +9,7 @@ const imagemin = require('gulp-imagemin');                  // подключе�
 const del = require('del');                                 // подключение del
 
 
-function browsersync() {                            // создание сервера
+function initServer() {                            // создание сервера
     browserSync.init({
         server: {
             baseDir: 'app/'
@@ -34,7 +34,7 @@ function minifyImages() {
                 ]
 	        })
         ]))
-        .pipe(dest('dist/images'))                                  // выгрузка минифицированных файлов в dist
+        .pipe(dest('docs/imgs'))                                  // выгрузка минифицированных файлов в dist
 }
 
 function compileScripts() {
@@ -55,7 +55,7 @@ function compileStyles() {
         'node_modules/lightslider/dist/css/lightslider.min.css'
     ])               
         .pipe(scss({outputStyle: 'compressed'}))    // преобразование scss файла в css файл
-        .pipe(concat('style.min.css'))              // конкатенация выбранных файлов (сейчас 1 файл) в файл style.min.css
+        .pipe(concat('style.min.css'))              // конкатенация выбранных файлов в файл style.min.css
         .pipe(autoprefixer({
             overrideBrowserslist: ['last 10 version'], // добавление префиксов для последних 10 версий браузеров
             grid: true                                 // добавление префиксов для гридов
@@ -68,7 +68,7 @@ function build() {
     return src([                                    // выбор файлов, с которыми будет осуществляться работа
         'app/css/style.min.css',
         'app/fonts/**/*',
-        'app/js/main.min.js',
+        'app/js/*.js',
         'app/*.html'
     ], {base: 'app'})                               // сохранить структуру проекта из app
         .pipe(dest('docs'))
@@ -82,9 +82,9 @@ function watching() {
 
 exports.compileStyles = compileStyles;              // для запуска через gulp compileStyles
 exports.watching = watching;                        // для запуска через gulp watching
-exports.browsersync = browsersync;                  // для запуска через gulp browsersync
+exports.initServer = initServer;                    // для запуска через gulp initServer
 exports.compileScripts = compileScripts;            // для запуска через gulp compileScripts
 exports.minifyImages = minifyImages;                // для запуска через gulp minifyImages
 
 exports.build = series(cleanDist, minifyImages, build);     // для запуска через gulp build
-exports.default = parallel(compileStyles, compileScripts, browsersync, watching);          // для параллельного запуска тасков через команду gulp
+exports.default = parallel(compileStyles, compileScripts, initServer, watching);          // для параллельного запуска тасков через команду gulp
