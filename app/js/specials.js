@@ -123,7 +123,7 @@ export const initSpecialMenuSwitcher = () => {
         `;
     
         return column;
-    }
+    };
     
     const createOptionCard = (pic, title, desc, price) => {
         const optionCard = `
@@ -146,7 +146,7 @@ export const initSpecialMenuSwitcher = () => {
         `;
     
         return optionCard;
-    }
+    };
     
     const createMenu = (menu) => {
         $('#options-container').html('');
@@ -171,18 +171,32 @@ export const initSpecialMenuSwitcher = () => {
                 }
             }
         }
-    }
+    };
+
+    const removeBorders = () => {
+        $('.col-3 .card').removeClass('border');
+        $('.col-3 .card').addClass('border-0');
+    };
     
     $('#breakfast-special').click(function() {
-        createMenu(breakfast)
+        createMenu(breakfast);
+        removeBorders();
+        $('#breakfast-special .card').toggleClass('border-0');
+        $('#breakfast-special .card').toggleClass('border');
     });
     
     $('#lunch-special').click(function() {
-        createMenu(lunch)
+        createMenu(lunch);
+        removeBorders();
+        $('#lunch-special .card').toggleClass('border-0');
+        $('#lunch-special .card').toggleClass('border');
     });
     
     $('#dinner-special').click(function() {
-        createMenu(dinner)
+        createMenu(dinner);
+        removeBorders();
+        $('#dinner-special .card').toggleClass('border-0');
+        $('#dinner-special .card').toggleClass('border');
     });
     
     $(document).ready(function(){

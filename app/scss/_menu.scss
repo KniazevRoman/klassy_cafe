@@ -20,6 +20,8 @@
         background-image: url(../imgs/controls.png);
         background-color: $primary;
         border-radius: 50%;
+        background-size: 200%;
+        background-repeat: no-repeat;
     }
 
     .lSPrev {
@@ -29,7 +31,7 @@
     }
 
     .lSNext {
-        background-position: -33px 0;
+        background-position: -34px 0;
         top: 110%;
         right: 40%;
     }

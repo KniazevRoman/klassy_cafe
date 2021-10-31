@@ -3,6 +3,21 @@
         cursor: pointer;
     }
 
+    .badge {
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .open-indicator {
+        background-image: url('../imgs/person-lines-fill.svg');
+        background-size: 60%;
+    }
+
+    .close-indicator {
+        background-image: url('../imgs/x.svg');
+        background-size: 80%;
+    }
+
     .social-links {
         top: 0;
         width: 100%;

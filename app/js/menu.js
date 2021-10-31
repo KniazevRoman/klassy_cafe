@@ -18,7 +18,7 @@ export const initMultiItemCarousel = () => {
             pauseOnHover: true,
             loop: true,
             slideEndAnimation: true,
-            pause: 8000,
+            pause: 3000,
     
             keyPress: false,
             controls: true,
